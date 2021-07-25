@@ -31,32 +31,6 @@ def usrreg(request):
     d=usgform()
     return render(request,'app/userregister.html',{'t':d})
 
-# @login_required
-# def order(request):
-#     a = Itemlist.objects.all()
-#     if request.method == "POST":
-#         q = OrderForm(request.POST)
-#         if q.is_valid():
-#             q.save()
-#             messages.success(request,"Order placed Successfully, Order again for more")
-#     q = OrderForm()
-#     return render(request,'app/order.html',{'a':q,'items':a})
-
-# @login_required
-# def orderaccept(request):
-#     y = Userorder.objects.all()
-#     return render(request,'app/orderaccept.html',{'q':y})
-
-# @login_required
-# def od(request,m):
-#     r=Userorder.objects.get(id=m)
-#     if request.method=="POST":
-#         messages.info(request,"Order Completed")
-#         r.delete()
-#         return redirect('/oc')
-#     e=OrderForm(instance=r)
-#     return render(request,'app/od.html',{'a':e})
-
 
 @login_required
 def additems(request):      
