@@ -1,0 +1,90 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %} Add items {% endblock %}
+{% block content %}
+<div class="container-fluid mt-4">
+    {% if messages %}
+    {% for m in messages %}
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{m}}
+      </div>
+      {% endfor %}
+      {% endif %}
+<div class="container-fluid">
+    <div class="row">
+        <h3 class="text-white mt-5" style="margin-left: 700px;">Add An Item</h3>
+    </div>
+    <div class="row">
+        <div class="col mt-2" style="margin-left:300px;">
+            <a href="{% url 'addstarter' %}" class="btn btn-info col-3 p-2" role="button">Add Starter</a>
+            <a href="{% url 'addbreads' %}" class="btn btn-info col-3 p-2" role="button">Add Breads</a>
+            <a href="{% url 'addrab' %}" class="btn btn-info col-3 p-2" role="button">Add Rice and Biriyani</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mt-3" style="margin-left:300px;">
+            <a href="{% url 'addcurries' %}" class="btn btn-info col-3 p-2" role="button">Add Curries</a>
+            <a href="{% url 'addts' %}" class="btn btn-info col-3 p-2" role="button">Add Thickshakes</a>
+            <a href="{% url 'addchinese' %}" class="btn btn-info col-3 p-2" role="button">Add Chinese</a>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col">
+            <div class="container mt-3">
+                <form method="post" class="text-light" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for j in r %}
+                        {{j}}
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col">
+                            <input type="reset" name="Reset" class="btn btn-outline-info my-2 form-control">
+                        </div>
+                        <div class="col">
+                            <input type="submit" value="Add" class="btn btn-outline-success my-2 form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="card-dark col-md-4 shadow-lg mx-2">
+        <div class="card-body">
+            <form method="post" class="text-light">
+            {% csrf_token %}
+            {% for j in r %}
+                {{j}}
+            {% endfor %}
+            <div class="row">
+                <div class="col">
+                    <input type="reset" name="Reset" class="btn btn-outline-info my-2 form-control">
+                </div>
+                <div class="col">
+                    <input type="submit" value="Add" class="btn btn-outline-success my-2 form-control">
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div> -->
